@@ -1,0 +1,7 @@
+{
+  "name": "Ulavan Organic Farm",
+  "description": "A modern agricultural farming website with responsive design, 3D interactive showcase, and fresh organic produce.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

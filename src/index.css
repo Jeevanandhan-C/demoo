@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-rubik: 'Rubik', sans-serif;
+  --font-nunito: 'Nunito Sans', sans-serif;
+
+  /* Natural organic agricultural palette - Strict 4-Tone System */
+  --color-farm-primary: #1B4332;   /* Primary Forest Green */
+  --color-farm-secondary: #C68B59; /* Warm Harvest Ochre */
+  --color-farm-text: #1A2421;      /* Deep Charcoal Earth */
+  --color-farm-accent: #40916C;    /* Fresh Sprout Accent */
+
+  /* Custom requested breakpoints */
+  --breakpoint-xs: 425px;
+  --breakpoint-md: 768px;
+  --breakpoint-xl: 1280px;
+}
+
+:root {
+  --primary: #1B4332;
+  --secondary: #C68B59;
+  --text: #1A2421;
+  --accent: #40916C;
+}
+
+/* Typography mappings as specified:
+   Primary & Secondary styles: Rubik
+   Text & Accent styles: Nunito Sans */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Rubik', sans-serif;
+}
+
+body, p, span, a, button, input, textarea, select, .font-body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-accent {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* 3D Visual Depth helpers */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Subtle luxury grain overlay or color blend */
+.color-blend-card {
+  background: linear-gradient(135deg, rgba(27, 67, 50, 0.03) 0%, rgba(198, 139, 89, 0.08) 50%, rgba(27, 67, 50, 0.04) 100%);
+}
+
+.color-blend-gradient {
+  background: linear-gradient(135deg, #1B4332 0%, #C68B59 60%, #40916C 100%);
+}
+
+.color-blend-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(64, 145, 108, 0.25) 0%, rgba(27, 67, 50, 0.15) 50%, transparent 70%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C68B59;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1B4332;
+}

@@ -1,0 +1,415 @@
+import {
+  NavItem,
+  FarmStat,
+  ProduceItem,
+  ProcessStep,
+  PremiumPlan,
+  FarmTourPackage,
+  Testimonial,
+  FAQItem,
+  ThreeDShowcaseItem,
+} from '../types';
+
+/**
+ * ====================================================================
+ * ULAVAN ORGANIC FARM - EDITABLE CENTRAL DATA FILE
+ * To modify texts, prices, images, or contacts, edit the values below.
+ * ====================================================================
+ */
+
+export const FARM_CONFIG = {
+  shopName: 'Ulavan Organic Farm',
+  tagline: 'Rooted in Heritage. Cultivated with Integrity.',
+  foundedYear: '2014',
+  location: 'Vellore Valley, Tamil Nadu, India',
+  phone: '+91 94432 18920',
+  whatsapp: '+91 94432 18920',
+  email: 'connect@ulavanorganicfarm.com',
+  operatingHours: 'Mon – Sun: 6:00 AM – 7:30 PM',
+  certifications: [
+    'NPOP Certified Organic (India Organic)',
+    'Jaivik Bharat Accredited',
+    'Zero Chemical Residue Lab Tested',
+    '100% Heirloom Non-GMO Seeds',
+  ],
+};
+
+export const NAV_LINKS: NavItem[] = [
+  { name: 'Home', href: '#hero' },
+  { name: 'Eco Process', href: '#process' },
+  { name: 'Our Heritage', href: '#about' },
+  { name: 'Order & Contact', href: '#contact' },
+];
+
+export const HERO_STATS: FarmStat[] = [
+  { value: '100%', label: 'Chemical Free', subtext: 'Natural compost & bio-inputs only' },
+  { value: '45+', label: 'Heritage Crops', subtext: 'Revived heirloom seeds' },
+  { value: '180+', label: 'Acres Cultivated', subtext: 'Regenerative ecosystem' },
+  { value: '14,000+', label: 'Happy Families', subtext: 'Farm-to-kitchen fresh weekly' },
+];
+
+export const THREE_D_ITEMS: ThreeDShowcaseItem[] = [
+  {
+    id: 'layer-soil',
+    title: 'Living Soil Microbiome',
+    tag: 'Base Layer • 0m Depth',
+    depth: 'Deep Soil Substrate',
+    description: 'Enriched with indigenous Jeevamrutham, vermicompost, and mycorrhizal fungi networks that hold 3x more rainwater.',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop',
+    metrics: [
+      { label: 'Organic Carbon', value: '2.8% (3x Avg)' },
+      { label: 'Beneficial Microbes', value: '4.2 Billion/g' },
+    ],
+  },
+  {
+    id: 'layer-canopy',
+    title: 'Multi-Tier Agroforestry',
+    tag: 'Middle Layer • 2.5m Depth',
+    depth: 'Biological Shield',
+    description: 'Natural companion cropping combining tall moringa, fruit canopies, and nitrogen-fixing legumes that naturally deter pests.',
+    image: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop',
+    metrics: [
+      { label: 'Canopy Density', value: '88% Cover' },
+      { label: 'Natural Pollinators', value: '16 Bee Hives' },
+    ],
+  },
+  {
+    id: 'layer-solar',
+    title: 'Solar Drip Irrigation',
+    tag: 'Top Layer • Drone Perspective',
+    depth: 'Precision Solar Flow',
+    description: 'Zero fossil-fuel solar pump stations paired with micro-drip networks saving over 65% water compared to flood irrigation.',
+    image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1200&auto=format&fit=crop',
+    metrics: [
+      { label: 'Solar Capacity', value: '25 kW Onsite' },
+      { label: 'Water Saved', value: '1.2M L/year' },
+    ],
+  },
+];
+
+export const PRODUCE_ITEMS: ProduceItem[] = [
+  {
+    id: 'prod-1',
+    name: 'Country Spinach & Greens Bundle (Keerai)',
+    category: 'vegetables',
+    price: '₹60',
+    unit: 'Per 500g Bunch',
+    description: 'Harvested at dawn: Siru Keerai, Palak, and Arai Keerai washed in clean spring water.',
+    harvestSeason: 'Daily Morning Harvest',
+    nutritionalHighlight: 'Rich in iron, natural chlorophyll & folate',
+    inStock: true,
+    tag: 'Morning Fresh',
+    image: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-2',
+    name: 'Heritage Native Country Tomatoes',
+    category: 'vegetables',
+    price: '₹55',
+    unit: 'Per 1 Kg',
+    description: 'Tangy, juicy heirloom country tomatoes grown from 50-year-old preserved seed lines.',
+    harvestSeason: 'Year-Round Harvest',
+    nutritionalHighlight: 'High lycopene content & vibrant natural flavor',
+    inStock: true,
+    tag: 'Best Seller',
+    image: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-3',
+    name: 'Mappillai Samba Red Rice',
+    category: 'grains',
+    price: '₹140',
+    unit: 'Per 1 Kg',
+    description: 'Traditional bridegroom red rice celebrated for stamina, immunity, and low glycemic index.',
+    harvestSeason: 'Kharif Harvest',
+    nutritionalHighlight: 'Immunity booster, zinc & complex carbohydrates',
+    inStock: true,
+    tag: 'Heritage Grain',
+    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-4',
+    name: 'Karuppu Kavuni (Black Emperor Rice)',
+    category: 'grains',
+    price: '₹190',
+    unit: 'Per 1 Kg',
+    description: 'Ancient royal forbidden grain packed with anthocyanin antioxidants and nutty sweetness.',
+    harvestSeason: 'Post-Monsoon Harvest',
+    nutritionalHighlight: 'Highest antioxidant score among all grains',
+    inStock: true,
+    tag: 'Superfood',
+    image: 'https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-5',
+    name: 'Wood-Pressed Groundnut Oil (Marachekku)',
+    category: 'oils',
+    price: '₹340',
+    unit: 'Per 1 Liter Bottle',
+    description: 'Slow cold-pressed in traditional vagai wood churners without heating or artificial refining.',
+    harvestSeason: 'Fresh Press Batch',
+    nutritionalHighlight: 'Natural Vitamin E and authentic aroma',
+    inStock: true,
+    tag: '100% Pure',
+    image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-6',
+    name: 'Cold-Pressed Sesame (Gingelly) Oil',
+    category: 'oils',
+    price: '₹420',
+    unit: 'Per 1 Liter Bottle',
+    description: 'Pressed using organic black sesame seeds and organic palm jaggery in traditional stone vats.',
+    harvestSeason: 'Traditional Batch',
+    nutritionalHighlight: 'Heart-healthy polyunsaturated lipids & minerals',
+    inStock: true,
+    tag: 'Cold Pressed',
+    image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-7',
+    name: 'Orchard Tree-Ripened Sweet Papaya',
+    category: 'fruits',
+    price: '₹45',
+    unit: 'Per 1 Kg',
+    description: 'Sun-ripened naturally on the tree with zero carbide or ripening chemicals.',
+    harvestSeason: 'Daily Plucked',
+    nutritionalHighlight: 'Digestive enzymes (papain) & Vitamin C',
+    inStock: true,
+    tag: 'Chemical Free',
+    image: 'https://images.unsplash.com/photo-1617112848923-cc2234396a8d?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: 'prod-8',
+    name: 'Tender Raw Guava & Seasonal Amla (Gooseberry)',
+    category: 'fruits',
+    price: '₹95',
+    unit: 'Per 1 Kg',
+    description: 'Crisp native white guavas and wild mountain amla harvested directly from our agro-forest.',
+    harvestSeason: 'Peak Season',
+    nutritionalHighlight: 'Natural Vitamin C powerhouse',
+    inStock: true,
+    tag: 'Orchard Fresh',
+    image: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=800&auto=format&fit=crop',
+  },
+];
+
+export const PROCESS_STEPS: ProcessStep[] = [
+  {
+    step: 1,
+    title: 'Seed Sanctity & Indigenous Breeding',
+    subtitle: 'Preserving 50+ Year Old Non-Hybrid Heirloom Strains',
+    description: 'We treat seeds with Panchagavya and natural cow-dung ash to boost resilience before sowing. No GMO or chemically coated hybrid seeds ever touch our soil.',
+    details: [
+      'Native open-pollinated seed bank on premise',
+      'Bio-treatment with neem oil and sweet flag root extract',
+      'Preservation of forgotten high-fiber crop varieties',
+    ],
+    duration: 'Week 1 - Germination',
+    image: 'https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    step: 2,
+    title: 'Soil Revitalization & Living Compost',
+    subtitle: 'Zero Synthetic Fertilizers. 100% Bio-Active Microbial Broth',
+    description: 'Every plot is nourished with Jeevamrutham, green mulching, and farm-raised Indian native cow compost that multiplies earthworm counts tenfold.',
+    details: [
+      'Fermented Jeevamrutham applied every 14 days',
+      'Inter-row leguminous green mulch for nitrogen fixing',
+      'Active earthworm castings creating spongy, moisture-retaining loam',
+    ],
+    duration: 'Ongoing Soil Cultivation',
+    image: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    step: 3,
+    title: 'Bio-Ecological Pest Stewardship',
+    subtitle: 'Natural Predators, Herbal Decoctions & Sticky Trap Shields',
+    description: 'Instead of toxic sprays that kill beneficial insects, we brew Agniastra (ginger, garlic, green chili extract) and plant yellow marigolds to trap pests naturally.',
+    details: [
+      'Herbal Agniastra & Neemasthra pest repellents',
+      'Border marigold and basil trap crops',
+      'Preservation of dragonflies, ladybirds, and garden spiders',
+    ],
+    duration: 'Full Growth Cycle',
+    image: 'https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    step: 4,
+    title: 'Dawn Harvest & Cold Eco-Dispatch',
+    subtitle: 'From Field to Your Doorstep within 12 to 24 Hours',
+    description: 'Produce is harvested by hand at first light when plant sugar and crispness are at their peak. Packed in breathable cotton and banana-leaf liners.',
+    details: [
+      '5:00 AM hand-plucking for optimal crispness',
+      'Cold spring-water rinse and air drying',
+      '100% plastic-free, recyclable delivery crates',
+    ],
+    duration: 'Harvest Day: 12 Hours Delivery',
+    image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop',
+  },
+];
+
+export const PREMIUM_PLANS: PremiumPlan[] = [
+  {
+    id: 'reserve-imperial',
+    title: 'The Imperial Harvest Reserve Crate',
+    cadence: 'Weekly Dawn Delivery',
+    bestFor: 'Discerning Families Seeking 100% Purity',
+    price: '₹1,450',
+    frequency: 'Billed Monthly (4 Crates)',
+    badge: 'Signature Reserve',
+    featured: true,
+    image: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1000&auto=format&fit=crop',
+    includes: [
+      'Fresh native vegetables and handpicked heirloom greens',
+      'Pure wood pressed virgin natural edible cooking oils',
+      'Sweet tree ripened seasonal fruits harvested at dawn',
+      'Clean hand packed breathable cotton lined eco crates',
+      'Zero chemical residue certified purity laboratory tests',
+    ],
+    exclusiveBonus: 'Complimentary quarterly 1 Kg Heirloom Mappillai Samba Rice',
+  },
+  {
+    id: 'reserve-elixirs',
+    title: 'Ancient Royal Grains & Wood-Pressed Vault',
+    cadence: 'Fortnightly Reserve Dispatch',
+    bestFor: 'Nutritionists, Athletes & Longevity Seekers',
+    price: '₹2,200',
+    frequency: 'Per Fortnightly Crate',
+    badge: 'Heirloom Superfood',
+    featured: false,
+    image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1000&auto=format&fit=crop',
+    includes: [
+      'Aromatic emperor black rice packed with vital minerals',
+      'High stamina traditional red rice for natural vitality',
+      'Slow stone churned cold oils with unrefined jaggery',
+      'Cold wood churned groundnut oil in earthenware jars',
+      'Glazed earthen storage containers for natural pantry',
+    ],
+    exclusiveBonus: 'Hand-ground ancestral roasted multigrain health mix (Sathu Maavu)',
+  },
+  {
+    id: 'reserve-homestead',
+    title: 'Private Homestead Family Harvest Allocation',
+    cadence: 'Twice Weekly Priority Dispatch',
+    bestFor: 'Complete Household Organic Sustenance',
+    price: '₹4,800',
+    frequency: 'Full Month Household Allotment',
+    badge: 'Bespoke Membership',
+    featured: false,
+    image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=1000&auto=format&fit=crop',
+    includes: [
+      'Full weekly farm harvest for healthy family households',
+      'Complete heirloom staples ancient grains and cold oils',
+      'First harvest rights on sweet seasonal orchard fruits',
+      'Direct phone access to resident organic lead farmer',
+      'Zero plastic returnable reusable wooden pantry crates',
+    ],
+    exclusiveBonus: 'Dedicated farm bed dedicated in your family name with seasonal report',
+  },
+];
+
+// Maintained for backward compatibility if any legacy component imports it
+export const FARM_TOURS: FarmTourPackage[] = [
+  {
+    id: 'tour-weekend',
+    title: 'Weekend Agro-Walk & Breakfast',
+    duration: '3.5 Hours (Sat & Sun Morning)',
+    bestFor: 'Families & Children',
+    price: '₹450 / Person',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop',
+    featured: true,
+    includes: [
+      'Guided farm tour with our chief agriculturist',
+      'Hands-on vegetable harvesting basket to take home',
+      'Authentic village breakfast cooked with farm grains',
+      'Cow petting and traditional bullock cart ride',
+    ],
+  },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 't-1',
+    name: 'Meenakshi Sundar',
+    role: 'Senior Pediatric Doctor',
+    location: 'Anna Nagar, Chennai',
+    rating: 5,
+    comment: 'The taste of Ulavan’s country tomatoes and native spinach took me back 30 years to my grandmother’s village. You can smell the living soil in the greens. Truly pure and uncompromisingly fresh.',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop',
+    verifiedPurchase: true,
+  },
+  {
+    id: 't-2',
+    name: 'Rajesh Narayanan',
+    role: 'Endurance Athlete Coach',
+    location: 'Adyar Coast, Chennai',
+    rating: 5,
+    comment: 'Switching to their Mappillai Samba and wood-pressed sesame oil transformed my post-run recovery. You know it’s genuine when the oil has natural sedimentation and unmatched golden aroma.',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
+    verifiedPurchase: true,
+  },
+  {
+    id: 't-3',
+    name: 'Karthik Sundaram',
+    role: 'Imperial Reserve Patron',
+    location: 'Race Course, Kovai',
+    rating: 5,
+    comment: 'We brought our 7-year-old twins for the weekend agro-walk. They harvested sweet corn with their own hands and drank tender coconut under the banyan tree. Our weekly Imperial Crate is irreplaceable!',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
+    verifiedPurchase: true,
+  },
+  {
+    id: 't-4',
+    name: 'Gautham Chandran',
+    role: 'Executive Wellness Chef',
+    location: 'White Town, Pondy',
+    rating: 5,
+    comment: 'As a chef who tests raw ingredients under high heat, Ulavan’s wood-pressed groundnut and gingelly oils behave completely differently. No burning, extraordinary depth of flavor, and genuine terroir.',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
+    verifiedPurchase: true,
+  },
+  {
+    id: 't-5',
+    name: 'Pooja Ramanathan',
+    role: 'Holistic Nutrition Head',
+    location: 'Besant Nagar, Chn',
+    rating: 5,
+    comment: 'I prescribe Ulavan’s Emperor Karuppu Kavuni rice to my diabetic and PCOS clients. The lab report included in every batch giving exact zero pesticide residues provides immense clinical confidence.',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
+    verifiedPurchase: true,
+  },
+];
+
+export const FAQS: FAQItem[] = [
+  {
+    category: 'Farming & Purity',
+    question: 'How do you guarantee 100% chemical-free produce without pesticides?',
+    answer: 'We adhere strictly to ancient Vrikshayurveda and regenerative natural farming methods. We brew all bio-inputs right on our farm: Jeevamrutham for living soil bacteria, Neemasthra and Agniastra for natural pest repellence. We openly invite every customer to inspect our farm at any time.',
+  },
+  {
+    category: 'Ordering & Delivery',
+    question: 'Where and how often do you dispatch fresh harvests?',
+    answer: 'We deliver door-to-door every Tuesday, Thursday, and Saturday across Vellore, Ranipet, Chennai, and surrounding corridors. Produce is plucked at 5:00 AM at first dawn and delivered in breathable eco-crates within mere hours.',
+  },
+  {
+    category: 'Certifications',
+    question: 'Are your products government and laboratory certified?',
+    answer: 'Yes. Ulavan Organic Farm holds accredited NPOP organic certification, Jaivik Bharat accreditation, and undergoes quarterly third-party multi-residue gas chromatography lab screening certifying 0.00% pesticide residues.',
+  },
+  {
+    category: 'Imperial Reserve Club',
+    question: 'How does the Ulavan Imperial Reserve subscription work?',
+    answer: 'The Imperial Reserve is our limited-allocation harvest subscription for conscious households. Members receive dawn-picked vegetables, unrefined cold-pressed oils, and ancient grains packed in breathable plastic-free crates. Each delivery includes our batch-specific NABL zero-chemical lab report.',
+  },
+  {
+    category: 'Oils & Grains',
+    question: 'What makes your wood-pressed oils and ancient rice unique?',
+    answer: 'Our oils are extracted using traditional Vagai wood churners at speeds under 14 RPM to ensure temperatures never exceed 38°C, preserving active polyphenols and vitamins. Our rice varieties (Karuppu Kavuni, Mappillai Samba) are 100% unpolished single-origin heirloom grains.',
+  },
+  {
+    category: 'Storage & Freshness',
+    question: 'How should I store native greens and cold-pressed oils at home?',
+    answer: 'Because our produce is never chemically forced or artificially ripened, it retains high cell density. Wrapped in a damp cotton cloth in your crisper, native greens stay crisp for 3-4 days. Our wood-pressed oils are best stored in the supplied dark glass or ceramic bottles away from direct sunlight.',
+  },
+];
