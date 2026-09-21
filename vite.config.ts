@@ -5,7 +5,12 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
+    root: 'src',
     base: '/demoo/',
+    build: {
+      outDir: '../dist',
+      emptyOutDir: true,
+    },
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
